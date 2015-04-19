@@ -449,3 +449,23 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+.contact-button {
+  text-decoration: none;
+  color: #BBDEFB;
+}
+
+.contact-button:hover, .contact-button:focus {
+  color: #B6B6B6;
+  text-decoration:none;
+}
+
+.footer-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer-link:hover, .footer-link:focus {
+  color:#B6B6B6;
+  text-decoration: none;
+}
