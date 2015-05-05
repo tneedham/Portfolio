@@ -377,15 +377,18 @@
                             <h2>Overhead Lights (Early 2015)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/Overhead Lights/OHL_Glamor.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The “Glamor shot” of the business end of the lights. Showing custom PCB, assembly on heatsinks, black machined mounts, busses, and LEDs with thermistors.</p>
                             <img src="img/portfolio/Overhead Lights/OHL_Bases.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>All nine machined mounts; holes in the center for screwing into ceiling/loft, PWR rails with crimp connectors to PCB and between rails, and side supports to prevent heatsinks moving either vertically (falling out) or translating (sliding out).</p>
                             <img src="img/portfolio/Overhead Lights/OHL_Circuits.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Four of the eleven PCBs printed and assembled, serial #’s 6,7,8, and 9 - so these will be mounted above my desk, sink, entrance, and closet, resp.</p>
                             <img src="img/portfolio/Overhead Lights/OHL_Test_Fit.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>All nine units, LEDs fully installed with thermal grease and screws, but PCBs only set on to test screw hole alignment and fit (PCBs were designed and sent out before heatsinks arrived - wasn’t sure if the scaled dimensions from Ebay would port over correctly. Thankfully, they did!)</p>
                             <img src="img/portfolio/Overhead Lights/OHL_Very_Old.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>My previous overhead light power supply. Took in 12v from a brick mounted underneath, and stepped it down to 3.4v to drive smaller and lower power SMD LEDs in a larger grid over my old desk. Worked ok, but not dimmable, had a loud fan, and created about a dozen shadows from each different LED. This regulator setup was made several years ago, to charge the supercap flashlight I made for my dad (also before I really knew how to use LM317s).</p>
+                            <p>These lights make up the most electrically/electronically involved project I’ve ever worked on, having a batch order of PCBs just for them, wireless radio protocols to be implemented, power signal circuitry design, and lots of GUI programming on the controller side. At press time they’re not installed yet, but have passed final testing and are now only waiting on the receiver code to be finished before they can go up (the master code can be more easily modified, and is much more complex than the receivers’ which only have to set PWM levels and report back their data).</p>
+                            <p>The goal of the system is to replace the stock lighting in my dorm room, which has only two points and leaves many areas dark. Additionally, they offer a chance to experiment with mesh networks of data generation and transfer, and truly upgrade the lighting, not just distribute it. </p>
+                            <p>Each receiver (there are nine total) has two 10W LEDs mounted to a heatsink (one 6000k, one 3000k, controlled separately); a control board (Arduino Pro Mini interface, NRF24L01 transceiver, MOSFETs, indication and error LEDs, 4 thermistors, other support circuitry); two 40mm fans, an acrylic cover/diffuser, and a machined mount as a go-between for heatsink and ceiling (it also carries the PWR and GND rails). The power LEDs can be individually and completely dimmed, as dictated by the master controller, to change the color temperature and intensity as the day progresses. In the morning it may be very bright and mostly cool, then change to balanced temperature and full brightness in the afternoon, then dim into evening, and then cut back on blue light (warm the temperature) as it gets into night. Each receiver only has to set the duty cycle for the MOSFETs - the master controller has the RTC and lighting algorithm to decide the setpoints. The nine discrete light sources are to be spread around the room, with each serving the area much better than the current lighting (the closet, for example, doesn’t have any). The fans are also on PWM-able MOSFETs, and so can be throttled as load changes throughout the day. Temperatures of each power diode, the ambient air, and the mean heatsink are all read by the microcontroller and fed back to the master wirelessly, and aid in keeping the fans at the right power setting (generally, the lowest possible setting to keep the LEDs at temperature). Other feedback includes system LEDs for coded errors (overheat, LED failure, etc) and measurement of line errors (SMD LEDs to check line status, 5v and 3.3v rail status, and a measurement circuit for incoming line voltage that also gets sent back to the master controller). Power is supplied by a 360W converter, putting out a line voltage between 10 and 14VDC to each receiver depending on load and line losses (which should be minimal with 10awg wire). The power supply is about 50% overrated for the system, and has a master relay controlled by the base station, as well as a bypass controlled manually (both the shut the receivers down, as those line status LEDs would be on all night otherwise). The base station runs the GUI, which presents graphs of all possible data for the past 24 hours, and logs all data in larger intervals. It also hosts the master receiver, RTC, bypass control board (for manual adjustment of brightness/temperature/fans/power), and voice shield (which is to be the main interface with the system). The base station is the last component to be developed, i.e. still on my to-do list; but it will get done! </p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -423,14 +426,15 @@
                             <h2>Microvendor (Mid 2012)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/MicroVendor/Microvendor_Glamor.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The “Glamor shot” of the finished device, the capstone of my Junior year summer in high school. Here you can see the user interface (three buttons), emergency stop (for when it inevitably caught fire), oven with temperature fuse and thermistor, power supply, and refrigerator. Also visible is the conveyor platform, halfway between fridge and oven, showing how you would pick up your cookie.</p>
                             <img src="img/portfolio/MicroVendor/Microvendor_Mech.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Opposite view of the first, with top lid removed. Now visible are the fridge internals (temp sensors, laser diodes, selector carriage, and tray holders) as well as the actual refrigeration system (two Peltier plates mounted between fan/heatsink combo on inside, custom water cooler blocks on outside, coolant radiator with fan array, insulation). Much more of the electrics and support systems are also visible (the control board housing on the left, bell to announce cycle completion, power supply and signal wires, mounts).</p>
                             <img src="img/portfolio/MicroVendor/Microvendor_Assem2.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>An early view of the interior of the fridge: dispenser tray is installed and visible, selector arm is visible along its carriage behind the tray assembly, Peliter cold-side heat sinks are visible before the fans were mounted and thermoformed to them, and the shell can be seen before the insulation was applied. The conveyor swing door and track can also be seen, without the lead screw installed.</p>
                             <img src="img/portfolio/MicroVendor/Microvendor_Full3.png" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/MicroVendor/Microvendor_Table.png" class="img-responsive" alt="">
+                            <p>One of the workbenches as it normally ended up after a days work. Tray assembly, fridge wall components, and a couple test systems can be seen.</p>
                             <p>Microvendor - which is what this thing is - was a project my friends helped me realize before our senior year of high school. They humored me by helping out almost every day for a month before we realized it was far beyond what we were capable of building. Still, we kept at it, and the self-contained kitchen, the size of a microwave, baked its first cookie to perfection the last weekend of summer. </p>
                             <p>It was goverened by an Arudino Mega, which monitored and controlled the solid state refrigerator, oven, cooling reservoir, dispenser trays, user input, and power consumption. Owing to budget contraints, everything had to be custom made, giving us excellent practice tolerancing lead screws, calculating thermal and electrical loads, an designing fail-safe systems so users would get cookies and pizzas, not shocks and burns. Ca. 2012</p>
                             <ul class="list-inline item-details">
@@ -470,15 +474,18 @@
                             <h2>Bug Modifications (Late 2011)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/Bug Modifications/Bug_Dark_Glam.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Driver’s view of the steering wheel, with blue-illuminated paddles and buttons.</p>
                             <img src="img/portfolio/Bug Modifications/Bug_Light_Glam.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Cleaner view of wheel, with modifications now visible as sandblasted aluminum paddles/armatures.</p>
                             <img src="img/portfolio/Bug Modifications/Bug_PCB.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The original board layout, done largely during AP Calc, before I knew how to use Eagle. Still, learned a lot from having to do ripups manually, and the board ended up working without ever failing!</p>
                             <img src="img/portfolio/Bug Modifications/Bug_Mounting.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>An early schematic for mounting the mods to the wheel (have to run cables without impeding wheel turning) and layouts for the paddle hinges (moved in two dimensions, and had to make contact with switches with just the right ‘feel’ to them).</p>
                             <img src="img/portfolio/Bug Modifications/Bug_Pinout.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The original pinout, probably also done during Calc, to make sure the d-sub connectors I planned on using would be enough and that the microcontroller could handle it.</p>
+                            <p>I inherited a bright red VW New Beetle from my sister, who had it passed down from my mom. When I got it, it was missing two hubcaps from Ohio State frat guys, had a manual tran I didn’t know how to work, and was pretty small for the hardware runs and mods I thought I was going to be doing with it (I thought I wanted to drive our truck - man I was naive!). Clearly I came to my senses, and realized this was easily the best car in the world.</p>
+                            <p>Once I got past just how good it was to drive, as it really had its own spirit (read as: “it broke a lot”) I found out how much potential it had. There was tons of extra space in the engine bay, and convenient channels under the body… Since we didn’t get heated seats with it, there was extra space in the dashboard cavity, and the steering wheel was practically designed to have paddles mounted on it! Plus the knee guard gave easy access to the engine firewall pass-through and fuse box, plus other warranty-voiding peripherals. All told this car taught me a lot, and ended up the most successful set of projects I’ve done yet. Oh, and the curved rear roof added a lot of extra power to the subwoofers.</p>
+                            <p>Inventory of systems I added: old-fashioned “ooga” style horn in engine bay; RGB LED underlights, with independent strobe controller; 1kW custom sub box with 2 12” woofers, ported and tailored to fit in the trunk. Audio input wired into master sound system, with bypass switch to disable. Tunable through car audio system. Power cables were woven inside the body panels and under rear seats. Whole sub box was press fit by rear seat instead of mounted to eliminate rattle and still allow fast access to jack and spare tire just in case ; steering wheel paddles, wired through control box to coordinate iPhone functionality and car audio/light systems. Paddles handled input volume and song skipping (next/prev) through two-way hinge system, lower buttons had sub power, ooga horn button, Siri/home button extension, and underlight remote power switch; control box took in steering wheel signals, parsed them into the different button combinations for the iPhone headphone controller, and sent them back to my phone. The output was then passed through to the car audio internally, eliminating wires and enabling playing from 3.5mm jack (previously didn’t have one). The lights were run through a SSR and 555 timer as controlled by a pot mounted in the dash, system power was made to look like an OEM switch by the heated seat controls, and accent lighting brightness was controlled by a symmetric pot running an LM317 and outputting to all the blue lights around the buttons. It was a great car, and really too bad that I had to get rid of it - there’s no place or reason for a car in Cambridge, and even though my parents loved the subwoofers, it wasn’t worth it to keep around. Someday, though, I’ll have another bug!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -516,14 +523,18 @@
                             <h2>MakeMIT (Early 2015)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/MakeMIT/MakeMIT_Mk2.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The glamor shot of Mark II, designed, built, and tested the second weekend of the competition. Here it’s shown on a pretty creepy mannequin hand (and all the hardware or whatever).</p>
                             <img src="img/portfolio/MakeMIT/MakeMIT_Mk1.JPG" class="img-responsive" alt="">
                             <p>The first iteration from MakeMIT Phase I, it's clear why we needed to focus on ergonomics for the second version. Still, this was an effecctive proof of concept and performed admirably for the limited time, resources, and engineering put into it.</p>
                             <img src="img/portfolio/MakeMIT/MakeMIT_Museum.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Our display in the MIT Museum studio off Lobby 10! Complete with a vignette of demo pictures and descriptions playing on a loop. Shows both Mk I and II, and extra hardware from each.</p>
                             <img src="img/portfolio/MakeMIT/MakeMIT_Ph2_Present.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>During the final presentations of Phase 2 - what better way to show its ergonomics than to put it on and take it off during the demo! On the right is Mk I, plugged in to show actuation.</p>
                             <img src="img/portfolio/MakeMIT/MakeMIT_Sketch1.jpg" class="img-responsive" alt="">
+                            <p>The first sketch from the first day of my first idea of how this would work. Showing the top and side views of the integrated bias tensioner, braking mechanism, and cable spool. From here it went into SolidWorks, then off to be laser cut (acrylic & ABS) or 3D printed (nylon-type plastic).</p>
+                            <p>Three of our team this year also did MakeMIT last year (its first year) and walked away with nothing to show for it - we had a great time, and worked ourselves silly, but we didn’t have any expectations for greatness going in to this round because of it. We had a vague idea of what we wanted to do, and really just a group of folks with an extra Saturday to burn through. 18 hours later though, we walked away with Oculus DK2s, prize money, and an invitation to come back the next week - we got 2nd place!</p>
+                            <p>The Force Feel’d is a force feedback glove worn on the forearm and hand that provides tactile feedback to VR environments. Specifically, it provides safer and cheaper feedback than existing tech. Rather than servos that are rigidly connected to the user’s fingers, or cables held tense by linear actuators, we opted for a fail-open system that never transfers force to the user. We used fishing line connected to finger grips as a flexible but taught transfer cable that stops the user’s fingers from extending beyond the object as perceived in VR. There was a constant, slight bias tension placed on the line to keep it taught, but otherwise no other force would be applied to the fingers. Instead, the cable was spooled up on a drum connected to a braking mechanism, preventing the finger from going any further forwards when the brake is actuated. In this way, even if there is a catastrophic failure in the control system, the user is never in a position to be harmed (unlike direct actuation systems, where an errant servo movement could torque a user’s fingers in awful directions).</p>
+                            <p>Finger position was captured by a Leap Motion controller, fed into a custom VR environment, and then rendered into a virtual hand. The mapping was quite accurate, owing largely to the Leap’s precision, and provided enough detail for us to model different types of blocks to play with: some solid and hard, others slightly compliant, and some rigidly attached to the floor - then all these could be made tangible through our system. The full user experience included our glove, a Leap Motion controller, laptop, and Oculus Rift DK2 to give a totally immersive environment to the user. Then, by varying the exact position of the brake, we could change the finger resistance from only the bias tension (quickly ‘learned’ by finger muscles) through viscous damping for a spongey block, to a hard stop for solid ones. It was a very neat demo, and worked surprisingly well for the 30-some hours we put into it total. It also set the stage for next year - we got second place in both rounds of the competition, next year we have to do better!! Hopefully with a team as good as this year’s (that means you guys, Ever, Po, Meghana, and Josh!)</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -560,14 +571,14 @@
                         <div class="modal-body">
                             <h2>SciOly (2011 & 2012)</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/Scioly/Scioly_Robot.JPG" class="img-responsive" alt="">
+                            <img src="img/portfolio/Scioly/Scioly_Robot.jpg" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/Scioly/Scioly_Bot_CAD.png" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/Scioly/Scioly_Bot_Op_Desc.png" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/Scioly/Scioly_Bot_Tower_Wiring.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>A rotated view of the control pedestal, wired up and ready to go. 6v and 12v bus bars can be seen in the control panel, and the switches up top that moved each motor forward or backwards.</p>
                             <img src="img/portfolio/Scioly/Scioly_Bot_Welding.jpg" class="img-responsive" alt="">
                             <p>Above is a robotic arm made for my school's Science Olympiad team: 4 DOF, 2 end effectors (grippers and an electromagnet), and a control pedestal - on wheels!</p>
                             <p>That last bit was especially important, since the thing ran on a car battery, plus two other SLABs. All told, it was easily 100lbs wheeling around Ohio and various host schools. It did quite well in the competitions, considering its operator (me) and was a good opportunity to design linear bearings, controllers/dampers to prevent overshoot (shocks to the system) and balance forces to make the 'bot fit in the start box, then unfold and complete all its tasks. Ca. 2012</p>
@@ -608,11 +619,11 @@
                             <h2>Rocketry (Mid 2011 - Late 2012)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/Rocketry/Rocket_V4.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Test stand for the most “advanced” engine I worked up to, showing oxygen cylinder, extinguisher for after the run, kerosene tank and pressure line, and needle valves to adjust propellant flows. This stand would be mounted on a test bench, put 50’ away from anything important, and then lit to make an awesome maelstrom of flaming kerosene in my backyard. It was easily seen by neighbors driving by, but never once got the attention of the police (kind of troubling, now that I think about it).</p>
                             <img src="img/portfolio/Rocketry/Mini_Rocket_Built.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>This is the first iteration I put together just after I pieced together my mill and found a better supplier than Amazon for metal stock. It ran on oxygen, propane (to preheat) and isopropanol (to run) and was so much more containable than the previous version that I ran it in the garage without much worry. OD was 1.25”, ID was 0.5”, nozzle major dia was something like 5/32” if I remember. It made a very nice, cute blue flame out the back, but I was never confident enough to run it very long, as I didn’t have thermocouples to keep track of the throat temp (I didn’t want to melt the aluminum).</p>
                             <img src="img/portfolio/Rocketry/Full_Rocket_Injector.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Not mentioned in the text above - there’s supposed to be the fuel injector right after this assembly, but the last test I ran with it ended in weird and unstable combustion, and very drastic pressure changes. After ramping down and extinguishing the setup, I took the chamber off to find the injector missing - that’s what caused all the malfunctions! I couldn’t find where my gorgeously machined steel nozzle had gone though.. There was only a little blob on the bottom of the chamber with some stainless steel screws sticking out of it - the chamber temp and runtime were enough to melt the injector right off the stem! You’ll have to take my word for it that the injector was nice, though. 8 micro holes and two pieces of steel faced, lapped, and screwed together since I couldn’t find a sealant rated for those temps (I thought the kerosene would help cool it down a little though - sheesh!)</p>
                             <img src="img/portfolio/Rocketry/Flight_Rocket_Stand.png" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/Rocketry/Mini_Rocket_Notes.png" class="img-responsive" alt="">
@@ -655,15 +666,15 @@
                             <h2>Desks (2012&2015)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/Desks/Desk_Finished.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The finished surface of my new dorm room desk - MDF on top of the substructure, sans any fasteners. Instead it’s held down by its own weight onto caulk, which prevents squeaking or shifting, but also holds well and doesn’t build up stress under deformation. This also allows for a perfectly clean top and easy replacement ($25 for an entirely new desk surface - not bad!).</p>
                             <img src="img/portfolio/Desks/Desk_Substructure.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The finished substructure, showing ties between supports to add rigidity and support for the rather floppy MDF.</p>
                             <img src="img/portfolio/Desks/Desk_Framing.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Just the supports, with ties waiting to be mounted. Each support is drilled into the wall with overrated concrete anchors, so the limiting factor of load rating is the pull out strength of the wood (not the fasteners, all those are fine). Like I tell people - you could probably sit on it, but I’m not about to try it with my computer and everything back on it. After all, you can do anything ONCE…</p>
                             <img src="img/portfolio/Desks/Desk_Populated.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Here is the whole setup, computer back up, subs from the bug in place, overhead light modulues ready to be programmed - all in all, much improved over the previous setup. Plus, the reat of the room layout benefitted too!</p>
                             <img src="img/portfolio/Desks/Andys_Desk.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>This is a very different desk that I made a few years ago for one of the collaborators on Microvendor - Andy - who ran all our software. He needed a new desk, and I told him I would love to help make something more future-proof (and way cheaper) than anything he could find online. We brainstormed for a bit - originally wanting to make an edge-lit plexi top - and finally settled on a simple black stained top (one of the first times I really finished wood, and it worked surprisingly well) The table can be reconfigured into a ‘L’ that fits in a corner either way (long side vs. short side) or it can be pulled apart and used as two standalone desks with four legs each. The surface is maple (I think?) with black stain and 4 hardcoats sanded matte to provide a good, non-impressionable writing surface. From what I hear, he still likes and uses it today!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -704,6 +715,7 @@
                             <p>Any good project starts out with overthinking, and my latest loft is no exception. Step one is always to make a detailed room schematic with accurate dimensions, so drawings are to scale and it's easier to calculate materials later</p>
                             <img src="img/portfolio/Lofts/New_Loft.JPG" class="img-responsive" alt="">
                             <p>A few mintues after making that drawing, and bingo! New loft, all done. Ok, maybe it took a little while longer, but the more iterations I go through, the faster each feels.</p>
+                            <p>Beyond just this one, I’ve also made one for my brother Ben (his was a prototype for mine, using compression fitting to tie into the wall. Non-marring and prevents shifting!), and one last year for me, my roommate, and his girlfriend (though originally it was only designed to handle 2. Safety factor might have been stretched a bit…). That one was recycled to use this year, after refurbing many of the parts. It’s held up very well to this day! I’ve also lent tools, muscle, or experience to many on my floor who were building or designing lofts, and to my friends back home. They’re great challenges and good ways to practice engineering for cyclic loads over huge timeframes. Oh, and you better make sure they don’t fail!</p>
                             <!--<img src="img/portfolio/Lofts/Lofts.jpg" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/Lofts/Lofts.jpg" class="img-responsive" alt="">
@@ -747,9 +759,9 @@
                             <h2>Gifts (2009-13)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/Gifts/Periodic_Cupcakes.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>“Periodic cupcakes” made with Julia and Marissa for a Science Olympiad team dinner. Laid out on top of the same honeycomb cardboard used to make the canoe! They tasted great, maybe that’s only because we were icing them for so long without getting to eat any though…</p>
                             <img src="img/portfolio/Gifts/Supercap_Light.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>Supercapacitor flashlight I made for my dad after realizing I could fix the issue he always had - just needed a quick flashlight that’s bright and durable (not an iPhone) that could actually charge quickly! This is just the schematic, the real one was built and worked, but then I scrapped it a while later to reuse the supercaps… Totally worth it (sorry dad).</p>
                             <img src="img/portfolio/Gifts/Mongolian_Grill.png" class="img-responsive" alt="">
                             <p>One of the earliest projects I have well-documented, this was also my first extensive use of a welder.</p>
                             <img src="img/portfolio/Gifts/Moms_Planter.png" class="img-responsive" alt="">
@@ -794,14 +806,14 @@
                             <hr class="star-primary">
                             <img src="img/portfolio/Roth's Car/Roths_Schem.png" class="img-responsive" alt="">
                             <p></p>
-                            <img src="img/portfolio/Roth's Car/Roths_RGB_Schem.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/Roth's Car/Roths_Top1.JPG" class="img-responsive" alt="">
                             <p></p>
-                            <img src="img/portfolio/Roth's Car/Roths_RGB_PCB.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/Roth's Car/Roths_Under2.JPG" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/Roth's Car/Roths_Master_PCB.png" class="img-responsive" alt="">
                             <p></p>
                             <img src="img/portfolio/Roth's Car/Roths_PCB_Printing.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>My favorite teacher, ever, has an ongoing rivalry with his brother competing in their sons’ pinewood derby races with their own cars. Once he knew he had a resident engineer who didn’t mind blowing off homework, he asked me to make a car that could knock the socks off his brother’s in a ‘renegade league’ for the parents. I took the drive motor from an RC helicopter and geared it down slightly onto the rear axel of his car - then pumped 200% more current through it than it was rated for. It collected hair and dust, though, and eventually overdriving took its toll on the motor, such that it didn’t actually beat his brothers EDF powered car… BUT it still won a best in show for the LEDs on top, headlights, and control system that far exceeded any others. It sensed changes in the cars orientation from an accelerometer and throttled the motor based on whether the wheels were slipping or not, and had a pre-calibration cycle for each run (which was a convenient time for a lightshow). After the embarrassment of only beating a standard car by a hair, I’m spurned on to go even faster - and ultimately beat the world record. This may very well be my thesis project someday. More power, more controls, and more data!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -839,13 +851,16 @@
                             <h2>UROPs (Mid 2014-15)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/UROPs/Sloan_Control.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The test cell control panel, where all data is collected and processed and all timings, temperatures, and ratios are controlled.</p>
                             <img src="img/portfolio/UROPs/Sloan_Engine.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The test engine, now one of two in the same test cell, with gas supplies, thermocouples, and electronics wired up. To the right is the instrument tower, with controls and signal processing equipment.</p>
                             <img src="img/portfolio/UROPs/Sloan_Head.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The top of the modified 4cyl diesel engine, where you can see the topmost cylinder has its diesel injector replaced by a sparkplug and pressure transducer.</p>
                             <img src="img/portfolio/UROPs/Sloan_Heaters.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The old intake gas heaters, now replaced with a more efficient and less leak-prone system I helped design.</p>
+                            <p>More details to come once I figure out exactly what I can and can’t say! Until then...</p>
+                            <p>Sloan Auto Lab Responsibilities: Assist graduate students and researchers in designing and completing experiments on a diesel engine running one of the cylinders experimentally to produce syngas; repair or improve the engine platform and test cell for reliability, maintenance, and better functionality.</p>
+                            <p>CSAIL Responsibilities: Assemble and give feedback on iterated PCB layouts for different subsystems of the research project; design mechanical cases and component layout for wireless charging receivers; design, assemble, or repair mechanical supports and cases for novel wireless charging controller.</p>
                             <!--<img src="img/portfolio/UROPs/.JPG" class="img-responsive" alt="">
                             <p></p> -->
                             <ul class="list-inline item-details">
@@ -885,13 +900,13 @@
                             <h2>Quick Projects (2010-2013)</h2>
                             <hr class="star-primary">
                             <img src="img/portfolio/Quick Projects/Light_V1.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>The first high-powered light I made, three zones of SMD LEDs running off and 18v tool battery from the shop. Also had a fan to help keep it cool. Still works to this day! Though some of the LEDs burned out (the ones you can see are up off the board a bit didn’t get proper cooling). FUn project, and great intro to high power lighting. Also served as the test platform when I made a strobe for the first time, which led to its integration to my car modifications.</p>
                             <img src="img/portfolio/Quick Projects/Parking_Guide.png" class="img-responsive" alt="">
-                            <p></p>
+                            <p>This torch was made just a few weeks ago when I was last home. My friends were over (Matt, Zach, and Cameron - remember this?) and we needed something to do, and I still had plenty of MIG wire and some oxygen left in my torch’s tank, so we bent some steel rod and welded on a support and bolted it to a cleaned up (then burned, for effect) piece of wood. Dip some shop rags in kerosene and ta-da! A torch Indiana Jones would be proud of. The sound when it’s swung around is fantastic.</p>
                             <img src="img/portfolio/Quick Projects/Torch_Whole.jpg" class="img-responsive" alt="">
-                            <p></p>
+                            <p>This torch was made just a few weeks ago when I was last home. My friends were over (Matt, Zach, and Cameron - remember this?) and we needed something to do, and I still had plenty of MIG wire and some oxygen left in my torch’s tank, so we bent some steel rod and welded on a support and bolted it to a cleaned up (then burned, for effect) piece of wood. Dip some shop rags in kerosene and ta-da! A torch Indiana Jones would be proud of. The sound when it’s swung around is fantastic.</p>
                             <img src="img/portfolio/Quick Projects/Cardboard_Canoe_Nose.JPG" class="img-responsive" alt="">
-                            <p></p>
+                            <p>This is the bow of a cardboard canoe I made for a group project in AP physics sophomore year. It’s not done - promise - but when it was it easily sailed across the pool and held all three of us (four? Don’t remember). It lived and died valiantly, ending with a recreation of the Titanic (I was the iceberg) where we ripped the hull in half using this steel cable. It was a fun day, and I hope I can find the video for it again!</p>
                             <img src="img/portfolio/Quick Projects/Zipline_BOM.png" class="img-responsive" alt="">
                             <p>One winter I got cabin fever pretty bad, and so decided to save up some money and make a zipline from one tree in our backyard to another (about 200'). It still works today!</p>
                             <ul class="list-inline item-details">
