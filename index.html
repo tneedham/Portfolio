@@ -447,7 +447,7 @@
                             <p></p>
                             <!--<img src="img/portfolio/New CSAIL/OHL_Circuits.jpg" class="img-responsive" alt="">
                             <p></p>-->
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -460,7 +460,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -494,7 +494,7 @@
                             <p></p>
                             <img src="img/portfolio/Internship/IMG_1819.jpg" class="img-responsive" alt="">
                             <p></p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -507,7 +507,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -541,7 +541,7 @@
                             <p></p>
                             <img src="img/portfolio/Cameron/IMG_2657.jpg" class="img-responsive" alt="">
                             <p></p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -554,7 +554,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -591,7 +591,7 @@
                             <p>These lights make up the most electrically/electronically involved project I’ve ever worked on, having a batch order of PCBs just for them, wireless radio protocols to be implemented, power signal circuitry design, and lots of GUI programming on the controller side. At press time they’re not installed yet, but have passed final testing and are now only waiting on the receiver code to be finished before they can go up (the master code can be more easily modified, and is much more complex than the receivers’ which only have to set PWM levels and report back their data).</p>
                             <p>The goal of the system is to replace the stock lighting in my dorm room, which has only two points and leaves many areas dark. Additionally, they offer a chance to experiment with mesh networks of data generation and transfer, and truly upgrade the lighting, not just distribute it. </p>
                             <p>Each receiver (there are nine total) has two 10W LEDs mounted to a heatsink (one 6000k, one 3000k, controlled separately); a control board (Arduino Pro Mini interface, NRF24L01 transceiver, MOSFETs, indication and error LEDs, 4 thermistors, other support circuitry); two 40mm fans, an acrylic cover/diffuser, and a machined mount as a go-between for heatsink and ceiling (it also carries the PWR and GND rails). The power LEDs can be individually and completely dimmed, as dictated by the master controller, to change the color temperature and intensity as the day progresses. In the morning it may be very bright and mostly cool, then change to balanced temperature and full brightness in the afternoon, then dim into evening, and then cut back on blue light (warm the temperature) as it gets into night. Each receiver only has to set the duty cycle for the MOSFETs - the master controller has the RTC and lighting algorithm to decide the setpoints. The nine discrete light sources are to be spread around the room, with each serving the area much better than the current lighting (the closet, for example, doesn’t have any). The fans are also on PWM-able MOSFETs, and so can be throttled as load changes throughout the day. Temperatures of each power diode, the ambient air, and the mean heatsink are all read by the microcontroller and fed back to the master wirelessly, and aid in keeping the fans at the right power setting (generally, the lowest possible setting to keep the LEDs at temperature). Other feedback includes system LEDs for coded errors (overheat, LED failure, etc) and measurement of line errors (SMD LEDs to check line status, 5v and 3.3v rail status, and a measurement circuit for incoming line voltage that also gets sent back to the master controller). Power is supplied by a 360W converter, putting out a line voltage between 10 and 14VDC to each receiver depending on load and line losses (which should be minimal with 10awg wire). The power supply is about 50% overrated for the system, and has a master relay controlled by the base station, as well as a bypass controlled manually (both the shut the receivers down, as those line status LEDs would be on all night otherwise). The base station runs the GUI, which presents graphs of all possible data for the past 24 hours, and logs all data in larger intervals. It also hosts the master receiver, RTC, bypass control board (for manual adjustment of brightness/temperature/fans/power), and voice shield (which is to be the main interface with the system). The base station is the last component to be developed, i.e. still on my to-do list; but it will get done! </p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -604,7 +604,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -639,7 +639,7 @@
                             <p>One of the workbenches as it normally ended up after a days work. Tray assembly, fridge wall components, and a couple test systems can be seen.</p>
                             <p>Microvendor - which is what this thing is - was a project my friends helped me realize before our senior year of high school. They humored me by helping out almost every day for a month before we realized it was far beyond what we were capable of building. Still, we kept at it, and the self-contained kitchen, the size of a microwave, baked its first cookie to perfection the last weekend of summer. </p>
                             <p>It was goverened by an Arudino Mega, which monitored and controlled the solid state refrigerator, oven, cooling reservoir, dispenser trays, user input, and power consumption. Owing to budget contraints, everything had to be custom made, giving us excellent practice tolerancing lead screws, calculating thermal and electrical loads, an designing fail-safe systems so users would get cookies and pizzas, not shocks and burns. Ca. 2012</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -652,7 +652,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -688,7 +688,7 @@
                             <p>I inherited a bright red VW New Beetle from my sister, who had it passed down from my mom. When I got it, it was missing two hubcaps from Ohio State frat guys, had a manual tran I didn’t know how to work, and was pretty small for the hardware runs and mods I thought I was going to be doing with it (I thought I wanted to drive our truck - man I was naive!). Clearly I came to my senses, and realized this was easily the best car in the world.</p>
                             <p>Once I got past just how good it was to drive, as it really had its own spirit (read as: “it broke a lot”) I found out how much potential it had. There was tons of extra space in the engine bay, and convenient channels under the body… Since we didn’t get heated seats with it, there was extra space in the dashboard cavity, and the steering wheel was practically designed to have paddles mounted on it! Plus the knee guard gave easy access to the engine firewall pass-through and fuse box, plus other warranty-voiding peripherals. All told this car taught me a lot, and ended up the most successful set of projects I’ve done yet. Oh, and the curved rear roof added a lot of extra power to the subwoofers.</p>
                             <p>Inventory of systems I added: old-fashioned “ooga” style horn in engine bay; RGB LED underlights, with independent strobe controller; 1kW custom sub box with 2 12” woofers, ported and tailored to fit in the trunk. Audio input wired into master sound system, with bypass switch to disable. Tunable through car audio system. Power cables were woven inside the body panels and under rear seats. Whole sub box was press fit by rear seat instead of mounted to eliminate rattle and still allow fast access to jack and spare tire just in case ; steering wheel paddles, wired through control box to coordinate iPhone functionality and car audio/light systems. Paddles handled input volume and song skipping (next/prev) through two-way hinge system, lower buttons had sub power, ooga horn button, Siri/home button extension, and underlight remote power switch; control box took in steering wheel signals, parsed them into the different button combinations for the iPhone headphone controller, and sent them back to my phone. The output was then passed through to the car audio internally, eliminating wires and enabling playing from 3.5mm jack (previously didn’t have one). The lights were run through a SSR and 555 timer as controlled by a pot mounted in the dash, system power was made to look like an OEM switch by the heated seat controls, and accent lighting brightness was controlled by a symmetric pot running an LM317 and outputting to all the blue lights around the buttons. It was a great car, and really too bad that I had to get rid of it - there’s no place or reason for a car in Cambridge, and even though my parents loved the subwoofers, it wasn’t worth it to keep around. Someday, though, I’ll have another bug!</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -701,7 +701,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -737,7 +737,7 @@
                             <p>Three of our team this year also did MakeMIT last year (its first year) and walked away with nothing to show for it - we had a great time, and worked ourselves silly, but we didn’t have any expectations for greatness going in to this round because of it. We had a vague idea of what we wanted to do, and really just a group of folks with an extra Saturday to burn through. 18 hours later though, we walked away with Oculus DK2s, prize money, and an invitation to come back the next week - we got 2nd place!</p>
                             <p>The Force Feel’d is a force feedback glove worn on the forearm and hand that provides tactile feedback to VR environments. Specifically, it provides safer and cheaper feedback than existing tech. Rather than servos that are rigidly connected to the user’s fingers, or cables held tense by linear actuators, we opted for a fail-open system that never transfers force to the user. We used fishing line connected to finger grips as a flexible but taught transfer cable that stops the user’s fingers from extending beyond the object as perceived in VR. There was a constant, slight bias tension placed on the line to keep it taught, but otherwise no other force would be applied to the fingers. Instead, the cable was spooled up on a drum connected to a braking mechanism, preventing the finger from going any further forwards when the brake is actuated. In this way, even if there is a catastrophic failure in the control system, the user is never in a position to be harmed (unlike direct actuation systems, where an errant servo movement could torque a user’s fingers in awful directions).</p>
                             <p>Finger position was captured by a Leap Motion controller, fed into a custom VR environment, and then rendered into a virtual hand. The mapping was quite accurate, owing largely to the Leap’s precision, and provided enough detail for us to model different types of blocks to play with: some solid and hard, others slightly compliant, and some rigidly attached to the floor - then all these could be made tangible through our system. The full user experience included our glove, a Leap Motion controller, laptop, and Oculus Rift DK2 to give a totally immersive environment to the user. Then, by varying the exact position of the brake, we could change the finger resistance from only the bias tension (quickly ‘learned’ by finger muscles) through viscous damping for a spongey block, to a hard stop for solid ones. It was a very neat demo, and worked surprisingly well for the 30-some hours we put into it total. It also set the stage for next year - we got second place in both rounds of the competition, next year we have to do better!! Hopefully with a team as good as this year’s (that means you guys, Ever, Po, Meghana, and Josh!)</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -750,7 +750,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -784,7 +784,7 @@
                             <img src="img/portfolio/Scioly/Scioly_Bot_Welding.jpg" class="img-responsive" alt="">
                             <p>Above is a robotic arm made for my school's Science Olympiad team: 4 DOF, 2 end effectors (grippers and an electromagnet), and a control pedestal - on wheels!</p>
                             <p>That last bit was especially important, since the thing ran on a car battery, plus two other SLABs. All told, it was easily 100lbs wheeling around Ohio and various host schools. It did quite well in the competitions, considering its operator (me) and was a good opportunity to design linear bearings, controllers/dampers to prevent overshoot (shocks to the system) and balance forces to make the 'bot fit in the start box, then unfold and complete all its tasks. Ca. 2012</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -797,7 +797,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -831,7 +831,7 @@
                             <img src="img/portfolio/Rocketry/Mini_Rocket_Notes.png" class="img-responsive" alt="">
                             <p></p>
                             <p>I am far more passionate about rocketry - or rocket components, anyway - than lighting or audio or robotics. Unfortunately, though, suburban Ohio isn't terribly friendly to extremely loud and very large fireballs in backyards - let alone Cambridge! So rocket tests are few and far between, but still loads of fun. These are examples of my low-budget progression, from designing the test system plumbing and electrical(above) all the way to a working setup, on the title card. It was a great showpiece! I only wish I could find one of the videos of it, and that it doesn't get shown to my neighbors back home... Ca. 2011 </p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -844,7 +844,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -878,7 +878,7 @@
                             <p></p>
                             <img src="img/portfolio/2013Redo/2013_Cover.jpg" class="img-responsive" alt="">
                             <p></p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -891,7 +891,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -925,7 +925,7 @@
                             <p></p>
                             <img src="img/portfolio/CSAILother/IMG_9686.jpg" class="img-responsive" alt="">
                             <p></p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -938,7 +938,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -972,7 +972,7 @@
                             <p></p>
                             <img src="img/portfolio/Everloft/IMG_2103.jpg" class="img-responsive" alt="">
                             <p></p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -985,7 +985,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -1023,7 +1023,7 @@
                             <img src="img/portfolio/Carpentry/New_Loft.jpg" class="img-responsive" alt="">
                             <p>A few mintues after making that drawing, and bingo! New loft, all done. Ok, maybe it took a little while longer, but the more iterations I go through, the faster each feels.</p>
                             <p>Beyond just this one, I’ve also made one for my brother Ben (his was a prototype for mine, using compression fitting to tie into the wall. Non-marring and prevents shifting!), and one last year for me, my roommate, and his girlfriend (though originally it was only designed to handle 2. Safety factor might have been stretched a bit…). That one was recycled to use this year, after refurbing many of the parts. It’s held up very well to this day! I’ve also lent tools, muscle, or experience to many on my floor who were building or designing lofts, and to my friends back home. They’re great challenges and good ways to practice engineering for cyclic loads over huge timeframes. Oh, and you better make sure they don’t fail!</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -1036,7 +1036,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -1069,7 +1069,7 @@
                             <p>My first polished trial of using cheap 10W LEDs from China, this array of 6 runs off 12v and has a fan mounted under the heatsink to keep everything cool. The heatsink was so perfectly shaped for this setup I couldn't help but thermal-glue 6 of them on.</p>
                             <img src="img/portfolio/HPLEDs/HPLEDArraySide.jpg" class="img-responsive" alt="">
                             <p>Side view of the same array, showing heatsink, wire routing, fan, and hardware.</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -1082,7 +1082,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -1116,7 +1116,7 @@
                             <p></p>
                             <img src="img/portfolio/Gifts/Gift_Box.jpg" class="img-responsive" alt="">
                             <p>Made to hold another gift inside, this was the best thing I've ever lasercut - it all fit together on the first go, and had a sliding top lid that was routed out (top not shown because it has the recepients name)</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -1129,7 +1129,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -1162,7 +1162,7 @@
                             <p></p>
                             <img src="img/portfolio/Roth'sCar/Roths_PCB_Printing.png" class="img-responsive" alt="">
                             <p>My favorite teacher, ever, has an ongoing rivalry with his brother competing in their sons’ pinewood derby races with their own cars. Once he knew he had a resident engineer who didn’t mind blowing off homework, he asked me to make a car that could knock the socks off his brother’s in a ‘renegade league’ for the parents. I took the drive motor from an RC helicopter and geared it down slightly onto the rear axel of his car - then pumped 200% more current through it than it was rated for. It collected hair and dust, though, and eventually overdriving took its toll on the motor, such that it didn’t actually beat his brothers EDF powered car… BUT it still won a best in show for the LEDs on top, headlights, and control system that far exceeded any others. It sensed changes in the cars orientation from an accelerometer and throttled the motor based on whether the wheels were slipping or not, and had a pre-calibration cycle for each run (which was a convenient time for a lightshow). After the embarrassment of only beating a standard car by a hair, I’m spurned on to go even faster - and ultimately beat the world record. This may very well be my thesis project someday. More power, more controls, and more data!</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -1175,7 +1175,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -1211,7 +1211,7 @@
                             <p>CSAIL Responsibilities: Assemble and give feedback on iterated PCB layouts for different subsystems of the research project; design mechanical cases and component layout for wireless charging receivers; design, assemble, or repair mechanical supports and cases for novel wireless charging controller.</p>
                             <!--<img src="img/portfolio/UROPs/.jpg" class="img-responsive" alt="">
                             <p></p> -->
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -1224,7 +1224,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -1257,7 +1257,7 @@
                             <p>This is the bow of a cardboard canoe I made for a group project in AP physics sophomore year. It’s not done - promise - but when it was it easily sailed across the pool and held all three of us (four? Don’t remember). It lived and died valiantly, ending with a recreation of the Titanic (I was the iceberg) where we ripped the hull in half using this steel cable. It was a fun day, and I hope I can find the video for it again!</p>
                             <img src="img/portfolio/QuickProjects/Zipline_BOM.png" class="img-responsive" alt="">
                             <p>One winter I got cabin fever pretty bad, and so decided to save up some money and make a zipline from one tree in our backyard to another (about 200'). It still works today!</p>
-                            <ul class="list-inline item-details">
+                            <!-- <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
                                     </strong>
@@ -1270,7 +1270,7 @@
                                     <strong><a href="http://startbootstrap.com">Web Development</a>
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul> -->
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
